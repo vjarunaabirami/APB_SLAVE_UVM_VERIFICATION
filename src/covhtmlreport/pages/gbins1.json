@@ -1,0 +1,11 @@
+var g_data = {
+c750:[4,'cp_rw',[],,'749',1,1,'active_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[0,'1','11',,'read'],[0,'1','9',,'write']],[]],
+c751:[4,'cp_addr',[],,'749',1,1,'active_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[0,'1','7',,'low'],[0,'1','0',1,'mid'],[0,'1','10',,'high'],[0,'1','3',,'top']],[]],
+c752:[4,'cp_pstrb',[],,'749',1,1,'active_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[0,'1','0',1,'byte0'],[0,'1','0',1,'byte1'],[0,'1','0',1,'byte2'],[0,'1','0',1,'byte3'],[0,'1','0',1,'hw_low'],[0,'1','0',1,'hw_high'],[0,'1','9',,'full']],[]],
+c753:[4,'cp_wdata',[],,'749',1,1,'active_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[0,'1','3',,'low'],[0,'1','2',,'mid'],[0,'1','4',,'high']],[]],
+c754:[5,'rw_x_addr',['cp_rw','cp_addr'],,'749',1,1,'active_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[4,'1','4',,'read','low'],[4,'1','3',,'write','low'],[4,'1','5',,'read','high'],[4,'1','5',,'write','high'],[4,'1','2',,'read','top'],[4,'1','1',,'write','top']],[[],[4,'1','0',1,'read','mid'],[4,'1','0',1,'write','mid']]],
+c756:[4,'cp_rdata',[],,'755',1,1,'passive_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[0,'1','14',,'low'],[0,'1','2',,'med'],[0,'1','4',,'high']],[]],
+c757:[4,'cp_err',[],,'755',1,1,'passive_mon_cov','748','/apb_slave_package/apb_slave_subscriber',[[],[0,'1','20',,'ok'],[0,'1','0',1,'err']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

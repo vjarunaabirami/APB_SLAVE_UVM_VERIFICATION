@@ -1,0 +1,16 @@
+var g_data = {
+g748:[{dummy:0},
+{name:'active_mon_cov',f:1,type:1,id:749,tb:'24',h:'15',m:'9',hp:'62.50%',cov:['72.85%','Y'],g:'100.00%',gp:['72.85%','Y'],opts:[[],['merge_instance','auto(true)']],parent:'748'},
+{name:'passive_mon_cov',f:1,type:1,id:755,tb:'5',h:'4',m:'1',hp:'80.00%',cov:['75.00%','Y'],g:'100.00%',gp:['75.00%','Y'],opts:[[],['merge_instance','auto(true)']],parent:'748'}],
+c749:{name:'active_mon_cov',type:1,pHash:'748',pPath:'/apb_slave_package/apb_slave_subscriber',totals:[16,9,'56.25%','Y',8,6,'75.00%','Y'],cvp:[{dummy:0},
+{name:'cp_rw',f:1,type:4,id:750,tb:'2',h:'2',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,parent:'749'},
+{name:'cp_addr',f:1,type:4,id:751,tb:'4',h:'3',m:'1',hp:'75.00%',cov:['75.00%','Y'],g:'100.00%',gp:['75.00%','Y'],hasb:1,parent:'749'},
+{name:'cp_pstrb',f:1,type:4,id:752,tb:'7',h:'1',m:'6',hp:'14.28%',cov:['14.28%','R'],g:'100.00%',gp:['14.28%','R'],hasb:1,parent:'749'},
+{name:'cp_wdata',f:1,type:4,id:753,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,parent:'749'}],crx:[{dummy:0},
+{name:'rw_x_addr',f:1,type:5,id:754,tb:'8',h:'6',m:'2',hp:'75.00%',cov:['75.00%','Y'],g:'100.00%',gp:['75.00%','Y'],hasb:1,parent:'749',cross:['cp_rw','cp_addr']}]},
+c755:{name:'passive_mon_cov',type:1,pHash:'748',pPath:'/apb_slave_package/apb_slave_subscriber',totals:[5,4,'80.00%','Y',0,0,'0.00%','R'],cvp:[{dummy:0},
+{name:'cp_rdata',f:1,type:4,id:756,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,parent:'755'},
+{name:'cp_err',f:1,type:4,id:757,tb:'2',h:'1',m:'1',hp:'50.00%',cov:['50.00%','Y'],g:'100.00%',gp:['50.00%','Y'],hasb:1,parent:'755'}],crx:[{dummy:0}]},
+dummyEnd:0
+};
+processCovergroupsData(g_data);

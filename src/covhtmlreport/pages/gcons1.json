@@ -1,0 +1,5 @@
+var g_db_data = [
+{dummy:0},
+{name:'active_mon_cov',f:1,type:6,id:749,tb:'24',h:'15',m:'9',hp:'62.50%',cov:['72.85%','Y'],g:'100.00%',gp:['72.85%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/apb_slave_package/apb_slave_subscriber',parent:'748'},
+{name:'passive_mon_cov',f:1,type:6,id:755,tb:'5',h:'4',m:'1',hp:'80.00%',cov:['75.00%','Y'],g:'100.00%',gp:['75.00%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/apb_slave_package/apb_slave_subscriber',parent:'748'}];
+processConsCovergroupsData(g_db_data);

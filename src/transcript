@@ -1,0 +1,354 @@
+# vsim -c apb_slave_top -do "run -all" "+UVM_TESTNAME=normal_write_read_test" "+SEQ=normal_write_read" 
+# Start time: 16:58:56 on Dec 07,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.apb_slave_interface(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.apb_slave_package(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.apb_slave_top(fast)
+# Loading work.apb_slave_assertions(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test normal_write_read_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# -----------------------------------------------------------------
+# Name                       Type                       Size  Value
+# -----------------------------------------------------------------
+# uvm_test_top               normal_write_read_test     -     @471 
+#   env                      apb_slave_environment      -     @478 
+#     act_agent              apb_slave_active_agent     -     @489 
+#       drv                  apb_slave_driver           -     @663 
+#         rsp_port           uvm_analysis_port          -     @678 
+#         seq_item_port      uvm_seq_item_pull_port     -     @670 
+#       mon_active           apb_slave_active_monitor   -     @686 
+#         ap_active          uvm_analysis_port          -     @693 
+#       seqr                 apb_slave_sequencer        -     @554 
+#         rsp_export         uvm_analysis_export        -     @561 
+#         seq_item_export    uvm_seq_item_pull_imp      -     @655 
+#         arbitration_queue  array                      0     -    
+#         lock_queue         array                      0     -    
+#         num_last_reqs      integral                   32    'd1  
+#         num_last_rsps      integral                   32    'd1  
+#     cov                    apb_slave_subscriber       -     @526 
+#       active_port          uvm_analysis_imp_active    -     @533 
+#       passive_port         uvm_analysis_imp_passive   -     @541 
+#     pass_agent             apb_slave_passive_agent    -     @496 
+#       mon_passive          apb_slave_passive_monitor  -     @709 
+#         ap_passive         uvm_analysis_port          -     @716 
+#     scb                    apb_slave_scoreboard       -     @503 
+#       active_mon_port      uvm_analysis_imp_act_mon   -     @510 
+#       passive_mon_port     uvm_analysis_imp_pass_mon  -     @518 
+# -----------------------------------------------------------------
+# 
+# UVM_INFO apb_slave_driver.sv(38) @ 5: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xd3 WRITE=1 WDATA=0x2259972a STRB=0xf
+# ** Error: Assertion 1 failed - PRDATA/PSLVERR not reset
+#    Time: 5 ns Started: 5 ns  Scope: apb_slave_top.vif.ASSERT.assert_reset_check File: apb_slave_assertions.sv Line: 25
+# UVM_INFO apb_slave_driver.sv(46) @ 15: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xd3 WRITE=1
+# ** Info: Reset check passed - Assertion 1
+#    Time: 15 ns Started: 15 ns  Scope: apb_slave_top.vif.ASSERT.assert_reset_check File: apb_slave_assertions.sv Line: 24
+# ** Info: Address within range - Assertion 2
+#    Time: 25 ns Started: 25 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Reset check passed - Assertion 1
+#    Time: 25 ns Started: 25 ns  Scope: apb_slave_top.vif.ASSERT.assert_reset_check File: apb_slave_assertions.sv Line: 24
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 35: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x0 WRITE=0 STRB=0x0 WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(65) @ 35: uvm_test_top.env.scb [SCBD] RESET PASS: RESET=0 ACT_RDATA=0x0 EXP_RDATA=0x0 PSLVERR=0
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 35 ns Started: 25 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 35 ns Started: 35 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Reset check passed - Assertion 1
+#    Time: 35 ns Started: 35 ns  Scope: apb_slave_top.vif.ASSERT.assert_reset_check File: apb_slave_assertions.sv Line: 24
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 45 ns Started: 35 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 65: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xd3 WRITE=0 WDATA=0x2259972a STRB=0x1
+# UVM_INFO apb_slave_driver.sv(46) @ 75: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xd3 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 85 ns Started: 85 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 95: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xd3 WRITE=0 STRB=0x1 WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 95: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0xd3 ACT=0x0 EXP=0x0
+# ** Info: Read data stable - Assertion 4
+#    Time: 95 ns Started: 85 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# ** Info: Address within range - Assertion 2
+#    Time: 95 ns Started: 95 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 105 ns Started: 95 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 125: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xa5 WRITE=1 WDATA=0x2a2c926b STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 135: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xa5 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 145 ns Started: 145 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 155: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xa5 WRITE=1 STRB=0xf WDATA=0x2a2c926b
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 155: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0xa5 WDATA=0x2a2c926b STRB=0xf NEW_MEM=0x2a2c926b
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 155 ns Started: 145 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 155 ns Started: 155 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 165 ns Started: 155 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 185: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xa5 WRITE=0 WDATA=0x2a2c926b STRB=0x8
+# UVM_INFO apb_slave_driver.sv(46) @ 195: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xa5 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 205 ns Started: 205 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 215: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xa5 WRITE=0 STRB=0x8 WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 215: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0xa5 ACT=0x2a2c926b EXP=0x2a2c926b
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 215 ns Started: 205 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 215 ns Started: 215 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 225 ns Started: 215 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 245: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xab WRITE=1 WDATA=0x7e29af9a STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 255: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xab WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 265 ns Started: 265 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 275: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xab WRITE=1 STRB=0xf WDATA=0x7e29af9a
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 275: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0xab WDATA=0x7e29af9a STRB=0xf NEW_MEM=0x7e29af9a
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 275 ns Started: 265 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 275 ns Started: 275 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 285 ns Started: 275 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 305: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xab WRITE=0 WDATA=0x7e29af9a STRB=0xd
+# UVM_INFO apb_slave_driver.sv(46) @ 315: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xab WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 325 ns Started: 325 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 335: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xab WRITE=0 STRB=0xd WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 335: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0xab ACT=0x7e29af9a EXP=0x7e29af9a
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 335 ns Started: 325 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 335 ns Started: 335 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 345 ns Started: 335 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 365: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xbe WRITE=1 WDATA=0x1e141713 STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 375: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xbe WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 385 ns Started: 385 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 395: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xbe WRITE=1 STRB=0xf WDATA=0x1e141713
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 395: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0xbe WDATA=0x1e141713 STRB=0xf NEW_MEM=0x1e141713
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 395 ns Started: 385 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 395 ns Started: 395 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 405 ns Started: 395 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 425: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xbe WRITE=0 WDATA=0x1e141713 STRB=0x5
+# UVM_INFO apb_slave_driver.sv(46) @ 435: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xbe WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 445 ns Started: 445 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 455: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xbe WRITE=0 STRB=0x5 WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 455: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0xbe ACT=0x1e141713 EXP=0x1e141713
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 455 ns Started: 445 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 455 ns Started: 455 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 465 ns Started: 455 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 485: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xe3 WRITE=1 WDATA=0xe21f6e25 STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 495: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xe3 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 505 ns Started: 505 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 515: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xe3 WRITE=1 STRB=0xf WDATA=0xe21f6e25
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 515: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0xe3 WDATA=0xe21f6e25 STRB=0xf NEW_MEM=0xe21f6e25
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 515 ns Started: 505 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 515 ns Started: 515 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 525 ns Started: 515 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 545: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xe3 WRITE=0 WDATA=0xe21f6e25 STRB=0xc
+# UVM_INFO apb_slave_driver.sv(46) @ 555: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xe3 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 565 ns Started: 565 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 575: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xe3 WRITE=0 STRB=0xc WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 575: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0xe3 ACT=0xe21f6e25 EXP=0xe21f6e25
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 575 ns Started: 565 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 575 ns Started: 575 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 585 ns Started: 575 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 605: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x8 WRITE=1 WDATA=0xb4609064 STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 615: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x8 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 625 ns Started: 625 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 635: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x8 WRITE=1 STRB=0xf WDATA=0xb4609064
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 635: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0x8 WDATA=0xb4609064 STRB=0xf NEW_MEM=0xb4609064
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 635 ns Started: 625 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 635 ns Started: 635 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 645 ns Started: 635 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 665: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x8 WRITE=0 WDATA=0xb4609064 STRB=0x7
+# UVM_INFO apb_slave_driver.sv(46) @ 675: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x8 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 685 ns Started: 685 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 695: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x8 WRITE=0 STRB=0x7 WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 695: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0x8 ACT=0xb4609064 EXP=0xb4609064
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 695 ns Started: 685 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 695 ns Started: 695 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 705 ns Started: 695 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 725: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x15 WRITE=1 WDATA=0xa71cae9f STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 735: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x15 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 745 ns Started: 745 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 755: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x15 WRITE=1 STRB=0xf WDATA=0xa71cae9f
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 755: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0x15 WDATA=0xa71cae9f STRB=0xf NEW_MEM=0xa71cae9f
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 755 ns Started: 745 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 755 ns Started: 755 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 765 ns Started: 755 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 785: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x15 WRITE=0 WDATA=0xa71cae9f STRB=0xa
+# UVM_INFO apb_slave_driver.sv(46) @ 795: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x15 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 805 ns Started: 805 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 815: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x15 WRITE=0 STRB=0xa WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 815: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0x15 ACT=0xa71cae9f EXP=0xa71cae9f
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 815 ns Started: 805 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 815 ns Started: 815 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 825 ns Started: 815 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 845: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xb4 WRITE=1 WDATA=0x141a0f8b STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 855: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xb4 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 865 ns Started: 865 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 875: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xb4 WRITE=1 STRB=0xf WDATA=0x141a0f8b
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 875: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0xb4 WDATA=0x141a0f8b STRB=0xf NEW_MEM=0x141a0f8b
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 875 ns Started: 865 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 875 ns Started: 875 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 885 ns Started: 875 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 905: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0xb4 WRITE=0 WDATA=0x141a0f8b STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 915: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0xb4 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 925 ns Started: 925 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 935: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0xb4 WRITE=0 STRB=0xf WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 935: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0xb4 ACT=0x141a0f8b EXP=0x141a0f8b
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 935 ns Started: 925 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 935 ns Started: 935 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 945 ns Started: 935 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 965: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x33 WRITE=1 WDATA=0x4238af2b STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 975: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x33 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 985 ns Started: 985 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 995: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x33 WRITE=1 STRB=0xf WDATA=0x4238af2b
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 995: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0x33 WDATA=0x4238af2b STRB=0xf NEW_MEM=0x4238af2b
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 995 ns Started: 985 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 995 ns Started: 995 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 1005 ns Started: 995 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 1025: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x33 WRITE=0 WDATA=0x4238af2b STRB=0x3
+# UVM_INFO apb_slave_driver.sv(46) @ 1035: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x33 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 1045 ns Started: 1045 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 1055: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x33 WRITE=0 STRB=0x3 WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 1055: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0x33 ACT=0x4238af2b EXP=0x4238af2b
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 1055 ns Started: 1045 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 1055 ns Started: 1055 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 1065 ns Started: 1055 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO apb_slave_driver.sv(38) @ 1085: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x84 WRITE=1 WDATA=0xbf8b3210 STRB=0xf
+# UVM_INFO apb_slave_driver.sv(46) @ 1095: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x84 WRITE=1
+# ** Info: Address within range - Assertion 2
+#    Time: 1105 ns Started: 1105 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 1115: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x84 WRITE=1 STRB=0xf WDATA=0xbf8b3210
+# UVM_INFO apb_slave_scoreboard.sv(112) @ 1115: uvm_test_top.env.scb [SCBD] WRITE OK: ADDR=0x84 WDATA=0xbf8b3210 STRB=0xf NEW_MEM=0xbf8b3210
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 1115 ns Started: 1105 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# ** Info: Address within range - Assertion 2
+#    Time: 1115 ns Started: 1115 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Write transfer stable - Assertion 3
+#    Time: 1125 ns Started: 1115 ns  Scope: apb_slave_top.vif.ASSERT.assert_write_transfer File: apb_slave_assertions.sv Line: 49
+# UVM_INFO apb_slave_driver.sv(38) @ 1145: uvm_test_top.env.act_agent.drv [DRV_SETUP] SETUP :ADDR=0x84 WRITE=0 WDATA=0xbf8b3210 STRB=0xc
+# UVM_INFO apb_slave_driver.sv(46) @ 1155: uvm_test_top.env.act_agent.drv [DRV_ACCESS] ACCESS : ADDR=0x84 WRITE=0
+# ** Info: Address within range - Assertion 2
+#    Time: 1165 ns Started: 1165 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# UVM_INFO apb_slave_active_monitor.sv(44) @ 1175: uvm_test_top.env.act_agent.mon_active [ACT_MON_SETUP] SETUP : ADDR=0x84 WRITE=0 STRB=0xc WDATA=0x0
+# UVM_INFO apb_slave_scoreboard.sv(148) @ 1175: uvm_test_top.env.scb [SCBD] READ PASS: ADDR=0x84 ACT=0xbf8b3210 EXP=0xbf8b3210
+# ** Error: Assertion 4 failed - PRDATA unstable during read
+#    Time: 1175 ns Started: 1165 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 61
+# ** Info: Address within range - Assertion 2
+#    Time: 1175 ns Started: 1175 ns  Scope: apb_slave_top.vif.ASSERT.assert_addr_range File: apb_slave_assertions.sv Line: 35
+# ** Info: Read data stable - Assertion 4
+#    Time: 1185 ns Started: 1175 ns  Scope: apb_slave_top.vif.ASSERT.assert_read_transfer_direct File: apb_slave_assertions.sv Line: 60
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1195: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO apb_slave_subscriber.sv(105) @ 1195: uvm_test_top.env.cov [apb_slave_subscriber] [ACTIVE] Coverage = 72.86%
+# UVM_INFO apb_slave_subscriber.sv(108) @ 1195: uvm_test_top.env.cov [apb_slave_subscriber] [PASSIVE] Coverage = 75.00%
+# UVM_INFO apb_slave_scoreboard.sv(183) @ 1195: uvm_test_top.env.scb [SCBD] RESULTS : PASS=11   FAIL=0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   88
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [ACT_MON_SETUP]    20
+# [DRV_ACCESS]    20
+# [DRV_SETUP]    20
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCBD]    21
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb_slave_subscriber]     2
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1195 ns  Iteration: 62  Instance: /apb_slave_top
+# End time: 16:58:57 on Dec 07,2025, Elapsed time: 0:00:01
+# Errors: 10, Warnings: 0
